@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./lsp
+    ./treesitter
+    ./bufferline.nix
+    ./cmp.nix
+    ./codeium.nix
+    ./neodev-nvim.nix
+    ./fugitive.nix
+    ./kitty-scrollback.nix
+    ./leap.nix
+    ./lualine.nix
+    ./luasnip.nix
+    ./oil.nix
+    ./scrollbar.nix
+    ./surround.nix
+    ./telescope.nix
+    ./trouble.nix
+    ./undotree.nix
+  ];
+}
