@@ -5,12 +5,13 @@
     ./bufferline.nix
     ./cmp.nix
     ./codeium.nix
-    ./neodev-nvim.nix
     ./fugitive.nix
     ./kitty-scrollback.nix
     ./leap.nix
     ./lualine.nix
     ./luasnip.nix
+    ./neodev-nvim.nix
+    ./noice.nix
     ./oil.nix
     ./scrollbar.nix
     ./surround.nix
