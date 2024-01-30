@@ -14,7 +14,7 @@
       smartindent = true; # Do smart autoindenting when starting a new line
 
       # Undo
-      undodir = "~/.vim/undodir"; # Directory to store undo history
+      undodir = "$HOME/.vim/undodir"; # Directory to store undo history
       undofile = true; # Enable persistent undo
 
       # Search
