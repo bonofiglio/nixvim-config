@@ -1,3 +1,4 @@
+{ specialArgs, ... }:
 {
   plugins.telescope = {
     enable = true;
@@ -22,8 +23,9 @@
           "<C-l>" = "select_default";
           "<C-j>" = "move_selection_next";
           "<C-k>" = "move_selection_previous";
+        } // (if specialArgs.minimal then { } else {
           "<C-t>" = "open_with_trouble";
-        };
+        });
       };
     };
     extraOptions = {
@@ -42,11 +44,6 @@
     };
   };
 
-  # Extremely hacky way of getting the Trouble Telescope provider to work
-  extraConfigLuaPost = ''
-    require('telescope.actions').open_with_trouble = require('trouble.providers.telescope').open_with_trouble
-  '';
-
   keymaps = [
     {
       mode = "n";
@@ -57,4 +54,9 @@
       };
     }
   ];
+
+  # Extremely hacky way of getting the Trouble Telescope provider to work
+  extraConfigLuaPost = if specialArgs.minimal then "" else ''
+    require('telescope.actions').open_with_trouble = require('trouble.providers.telescope').open_with_trouble
+  '';
 }

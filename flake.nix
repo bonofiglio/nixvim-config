@@ -15,7 +15,6 @@
     } @ inputs:
     let
       config = import ./config;
-      minimal-config = import ./config/minimal.nix;
     in
 
     flake-parts.lib.mkFlake
@@ -42,9 +41,8 @@
                 config.allowUnfree = true;
               };
               module = config;
-              # You can use `extraSpecialArgs` to pass additional arguments to your module files
               extraSpecialArgs = {
-                # inherit (inputs) foo;
+                minimal = false;
               };
             };
 
@@ -53,10 +51,9 @@
                 inherit system;
                 config.allowUnfree = true;
               };
-              module = minimal-config;
-              # You can use `extraSpecialArgs` to pass additional arguments to your module files
+              module = config;
               extraSpecialArgs = {
-                # inherit (inputs) foo;
+                minimal = true;
               };
             };
           in
