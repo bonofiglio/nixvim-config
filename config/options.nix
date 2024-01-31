@@ -14,7 +14,6 @@
       smartindent = true; # Do smart autoindenting when starting a new line
 
       # Undo
-      undodir = "$HOME/.vim/undodir"; # Directory to store undo history
       undofile = true; # Enable persistent undo
 
       # Search
@@ -30,11 +29,15 @@
     };
 
     extraConfigLua = ''
+      -- Enable signcolumn only when the KITTY_SCROLLBACK environment variable is not set
       if os.getenv("KITTY_SCROLLBACK") == "1" then
           vim.opt.signcolumn = "no"
       else
           vim.opt.signcolumn = "yes"
       end
-    ''; # Enable signcolumn only when the KITTY_SCROLLBACK environment variable is not set
+
+      -- Directory to store undo history
+      vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" 
+    '';
   };
 }
