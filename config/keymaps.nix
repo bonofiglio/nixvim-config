@@ -302,7 +302,7 @@
       };
     }
     {
-      mode = ["n" "v"];
+      mode = [ "n" "v" ];
       key = "<leader>/";
       action = "noh";
       options = {
