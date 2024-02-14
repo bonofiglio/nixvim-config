@@ -9,6 +9,9 @@
       key = "<leader>u";
       action = "vim.cmd.UndotreeToggle";
       lua = true;
+      options = {
+          silent = true;
+      };
     }
   ];
 }

@@ -101,6 +101,7 @@
       action = "<cmd>Oil<CR>";
       options = {
         desc = "Open oil file explorer";
+        silent = true;
       };
     }
   ];

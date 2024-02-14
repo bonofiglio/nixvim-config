@@ -51,6 +51,7 @@
       action = "<cmd>Telescope frecency workspace=CWD<CR>";
       options = {
         desc = "Find files with Telescope. Sorted by frecency";
+        silent = true;
       };
     }
   ];

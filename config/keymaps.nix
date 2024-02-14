@@ -7,6 +7,7 @@
       action = ":m '>+1<CR>gv=gv";
       options = {
         desc = "Move selected lines down";
+        silent = true;
       };
     }
     {
@@ -15,6 +16,7 @@
       action = ":m '<-2<CR>gv=gv";
       options = {
         desc = "Move selected lines up";
+        silent = true;
       };
     }
     {
@@ -23,6 +25,7 @@
       action = "mzJ`z";
       options = {
         desc = "Append line below into current line";
+        silent = true;
       };
     }
     {
@@ -31,6 +34,7 @@
       action = "nzzzv";
       options = {
         desc = "Next search result and center the screen";
+        silent = true;
       };
     }
     {
@@ -39,6 +43,7 @@
       action = "Nzzzv";
       options = {
         desc = "Previous search result and center the screen";
+        silent = true;
       };
     }
     {
@@ -47,6 +52,7 @@
       action = "<C-d>zz";
       options = {
         desc = "Scroll down and center the screen";
+        silent = true;
       };
     }
     {
@@ -55,6 +61,7 @@
       action = "<C-u>zz";
       options = {
         desc = "Scroll up and center the screen";
+        silent = true;
       };
     }
     {
@@ -63,6 +70,7 @@
       action = "\"_dP";
       options = {
         desc = "Paste without overwriting register";
+        silent = true;
       };
     }
     {
@@ -71,6 +79,7 @@
       action = "\"+y";
       options = {
         desc = "Yank to system clipboard";
+        silent = true;
       };
     }
     {
@@ -79,6 +88,7 @@
       action = "\"+Y";
       options = {
         desc = "Yank current line to system clipboard";
+        silent = true;
       };
     }
     {
@@ -87,6 +97,7 @@
       action = "\"_d";
       options = {
         desc = "Delete without overwriting register";
+        silent = true;
       };
     }
     # Don't @ me
@@ -95,6 +106,7 @@
       key = "<C-c>";
       action = "<Esc>";
       options = {
+        silent = true;
         desc = "Escape insert mode";
       };
     }
@@ -117,6 +129,7 @@
       action = "vim.diagnostic.open_float";
       lua = true;
       options = {
+        silent = true;
         desc = "Show diagnostics under cursor";
       };
     }
@@ -126,6 +139,7 @@
       action = "vim.diagnostic.goto_next";
       lua = true;
       options = {
+        silent = true;
         desc = "Next diagnostic";
       };
     }
@@ -135,6 +149,7 @@
       action = "vim.diagnostic.goto_prev";
       lua = true;
       options = {
+        silent = true;
         desc = "Previous diagnostic";
       };
     }
@@ -144,6 +159,7 @@
       action = "<cmd> bp <CR>";
       options = {
         desc = "Go to previous buffer";
+        silent = true;
       };
     }
     {
@@ -151,6 +167,7 @@
       key = "<leader>j";
       action = "<cmd> bn <CR>";
       options = {
+        silent = true;
         desc = "Go to next buffer";
       };
     }
@@ -160,6 +177,7 @@
       action = "<cmd> bd <CR>";
       options = {
         desc = "Close current buffer";
+        silent = true;
       };
     }
     {
@@ -171,16 +189,8 @@
         end'';
       lua = true;
       options = {
+        silent = true;
         desc = "Format and save file";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>pg";
-      action = ''function() builtin.grep_string({ search = vim.fn.input("Grep > ") }) end'';
-      lua = true;
-      options = {
-        desc = "Search for string with Grep";
       };
     }
     # Not my finest work, but it allows <c-m> to be mapped to a different action than <cr>
@@ -197,6 +207,7 @@
       action = "function() vim.lsp.buf.definition() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Go to definition";
       };
     }
@@ -206,6 +217,7 @@
       action = "function() vim.lsp.buf.hover() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Show information about symbol under cursor";
       };
     }
@@ -215,6 +227,7 @@
       action = "function() vim.lsp.buf.workspace_symbol() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Search workspace for symbol";
       };
     }
@@ -224,6 +237,7 @@
       action = "function() vim.diagnostic.goto_next() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Next diagnostic";
       };
     }
@@ -233,6 +247,7 @@
       action = "function() vim.diagnostic.goto_prev() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Previous diagnostic";
       };
     }
@@ -242,6 +257,7 @@
       action = "function() vim.lsp.buf.code_action() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Show code actions available at cursor";
       };
     }
@@ -251,6 +267,7 @@
       action = "function() vim.lsp.buf.references() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Show all references to symbol under cursor";
       };
     }
@@ -260,6 +277,7 @@
       action = "function() vim.lsp.buf.rename() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Rename symbol under cursor";
       };
     }
@@ -269,6 +287,7 @@
       action = "function() vim.lsp.buf.signature_help() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Show signature help";
       };
     }
@@ -278,7 +297,17 @@
       action = "function() vim.lsp.buf.format() end";
       lua = true;
       options = {
+        silent = true;
         desc = "Format current file";
+      };
+    }
+    {
+      mode = ["n" "v"];
+      key = "<leader>/";
+      action = "noh";
+      options = {
+        silent = true;
+        desc = "Clear search highlights";
       };
     }
   ];
