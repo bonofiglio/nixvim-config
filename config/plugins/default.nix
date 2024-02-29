@@ -5,6 +5,7 @@
     ./bufferline.nix
     ./cmp.nix
     ./codeium.nix
+    ./crates.nix
     ./fugitive.nix
     ./kitty-scrollback.nix
     ./leap.nix
