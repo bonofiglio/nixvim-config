@@ -1,7 +1,7 @@
 {
   plugins.codeium-vim = {
     enable = true;
-    noMapTab = true;
+    settings.no_map_tab = true;
   };
 
   keymaps = [

@@ -7,9 +7,6 @@ let
     ./plugins/oil.nix
     ./plugins/surround.nix
     ./plugins/telescope.nix
-    ./theme.nix
-    ./keymaps.nix
-    ./options.nix
   ];
 in
 {

@@ -1,7 +1,7 @@
 {
   config = {
     luaLoader.enable = true; # Free performance
-    options = {
+    opts = {
       # Line number
       nu = true; # Print the line number in front of each line
       relativenumber = true; # Relative line numbers

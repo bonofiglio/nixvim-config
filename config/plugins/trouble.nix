@@ -3,6 +3,29 @@
     enable = true;
   };
 
+  extraConfigLua = ''
+    local View = require('trouble.view')
+
+    View._next_item = View.next_item
+    View._previous_item = View.previous_item
+
+    function View:next_item(opts)
+        if vim.api.nvim_win_is_valid(self.win) == false or vim.api.nvim_buf_is_valid(self.buf) == false then
+          return
+        end
+
+        self._next_item(opts)
+    end
+
+    function View:previous_item(opts)
+        if vim.api.nvim_win_is_valid(self.win) == false or vim.api.nvim_buf_is_valid(self.buf) == false then
+          return
+        end
+
+        self._previous_item(opts)
+    end
+  '';
+
   keymaps = [
     {
       mode = "n";
@@ -43,7 +66,11 @@
     {
       mode = "n";
       key = "<C-j>";
-      action = "function() require('trouble').next({ skip_groups = true, jump = true }) end";
+      action = ''
+        function() 
+          require('trouble').next({ skip_groups = true, jump = true }) 
+        end
+      '';
       lua = true;
     }
     {

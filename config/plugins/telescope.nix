@@ -4,41 +4,43 @@
     enable = true;
     extensions = {
       frecency.enable = true;
-      media_files.enable = true;
+      media-files.enable = true;
       ui-select.enable = true;
     };
-    keymaps = {
-      "<C-p>" = {
-        action = "find_files";
-        desc = "Find files with Telescope";
-      };
-      "<leader>ps" = {
-        action = "live_grep";
-        desc = "Search for string with live grep with Telescope";
-      };
-    };
-    defaults = {
-      mappings = {
-        i = {
-          "<C-l>" = "select_default";
-          "<C-j>" = "move_selection_next";
-          "<C-k>" = "move_selection_previous";
-        } // (if specialArgs.minimal then { } else {
-          "<C-t>" = "open_with_trouble";
-        });
-      };
-    };
-    extraOptions = {
-      extensions = {
-        frecency = {
-          auto_validate = true;
-          db_safe_mode = false;
-          db_validate_threshold = 1;
+    settings = {
+      keymaps = {
+        "<C-p>" = {
+          action = "find_files";
+          desc = "Find files with Telescope";
+        };
+        "<leader>ps" = {
+          action = "live_grep";
+          desc = "Search for string with live grep with Telescope";
         };
       };
-      pickers = {
-        colorscheme = {
-          enable_preview = true;
+      defaults = {
+        mappings = {
+          i = {
+            "<C-l>" = "select_default";
+            "<C-j>" = "move_selection_next";
+            "<C-k>" = "move_selection_previous";
+          } // (if specialArgs.minimal then { } else {
+            "<C-t>" = "open_with_trouble";
+          });
+        };
+      };
+      extraOptions = {
+        extensions = {
+          frecency = {
+            auto_validate = true;
+            db_safe_mode = false;
+            db_validate_threshold = 1;
+          };
+        };
+        pickers = {
+          colorscheme = {
+            enable_preview = true;
+          };
         };
       };
     };

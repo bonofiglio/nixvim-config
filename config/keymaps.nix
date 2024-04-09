@@ -304,7 +304,7 @@
     {
       mode = [ "n" "v" ];
       key = "<leader>/";
-      action = "noh";
+      action = "<CMD>noh<CR>";
       options = {
         silent = true;
         desc = "Clear search highlights";

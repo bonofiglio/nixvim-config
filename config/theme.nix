@@ -1,4 +1,4 @@
 {
   config.colorschemes.catppuccin.enable = true;
-  config.options.termguicolors = true;
+  config.opts.termguicolors = true;
 }
