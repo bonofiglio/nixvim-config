@@ -2,6 +2,7 @@
   imports = [
     ./lsp
     ./treesitter
+    ./extra
     ./bufferline.nix
     ./cmp.nix
     ./codeium.nix
