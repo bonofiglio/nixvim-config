@@ -3,19 +3,31 @@
   plugins.telescope = {
     enable = true;
     extensions = {
-      frecency.enable = true;
+      frecency = {
+        enable = true;
+        settings = {
+          auto_validate = true;
+          db_safe_mode = false;
+          db_validate_threshold = 1;
+        };
+      };
       media-files.enable = true;
       ui-select.enable = true;
     };
+    keymaps = {
+      "<C-p>" = {
+        action = "find_files";
+        options.desc = "Find files with Telescope";
+      };
+      "<leader>ps" = {
+        action = "live_grep";
+        options.desc = "Search for string with live grep with Telescope";
+      };
+    };
     settings = {
-      keymaps = {
-        "<C-p>" = {
-          action = "find_files";
-          desc = "Find files with Telescope";
-        };
-        "<leader>ps" = {
-          action = "live_grep";
-          desc = "Search for string with live grep with Telescope";
+      pickers = {
+        colorscheme = {
+          enable_preview = true;
         };
       };
       defaults = {
@@ -27,20 +39,6 @@
           } // (if specialArgs.minimal then { } else {
             "<C-t>" = "open_with_trouble";
           });
-        };
-      };
-      extraOptions = {
-        extensions = {
-          frecency = {
-            auto_validate = true;
-            db_safe_mode = false;
-            db_validate_threshold = 1;
-          };
-        };
-        pickers = {
-          colorscheme = {
-            enable_preview = true;
-          };
         };
       };
     };
