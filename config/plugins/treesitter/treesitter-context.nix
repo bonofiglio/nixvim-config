@@ -1,15 +1,17 @@
 {
   plugins.treesitter-context = {
     enable = true;
-    maxLines = 3;
-    minWindowHeight = 0;
-    lineNumbers = true;
-    multilineThreshold = 1;
-    trimScope = "outer";
-    mode = "cursor";
-    separator = null;
-    zindex = 20;
-    onAttach = null;
+    settings = {
+      max_lines = 3;
+      min_window_height = 0;
+      line_numbers = true;
+      multiline_threshold = 1;
+      trim_scope = "outer";
+      mode = "cursor";
+      separator = null;
+      zindex = 20;
+      on_attach = null;
+    };
   };
 
   extraConfigLuaPost = ''
