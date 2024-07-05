@@ -7,10 +7,9 @@
     {
       mode = "n";
       key = "<leader>u";
-      action = "vim.cmd.UndotreeToggle";
-      lua = true;
+      action.__raw = "vim.cmd.UndotreeToggle";
       options = {
-          silent = true;
+        silent = true;
       };
     }
   ];

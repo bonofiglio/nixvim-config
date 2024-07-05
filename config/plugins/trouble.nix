@@ -7,60 +7,51 @@
     {
       mode = "n";
       key = "<leader>to";
-      action = "function() require('trouble').toggle() end";
-      lua = true;
+      action.__raw = "function() require('trouble').toggle() end";
     }
     {
       mode = "n";
       key = "<leader>tt";
-      action = "function() require('trouble').close() end";
-      lua = true;
+      action.__raw = "function() require('trouble').close() end";
     }
     {
       mode = "n";
       key = "<leader>tw";
-      action = "function() require('trouble').toggle('workspace_diagnostics') end";
-      lua = true;
+      action.__raw = "function() require('trouble').toggle('workspace_diagnostics') end";
     }
     {
       mode = "n";
       key = "<leader>td";
-      action = "function() require('trouble').toggle('document_diagnostics') end";
-      lua = true;
+      action.__raw = "function() require('trouble').toggle('document_diagnostics') end";
     }
     {
       mode = "n";
       key = "<leader>tq";
-      action = "function() require('trouble').toggle('quickfix') end";
-      lua = true;
+      action.__raw = "function() require('trouble').toggle('quickfix') end";
     }
     {
       mode = "n";
       key = "<leader>tl";
-      action = "function() require('trouble').toggle('loclist') end";
-      lua = true;
+      action.__raw = "function() require('trouble').toggle('loclist') end";
     }
     {
       mode = "n";
       key = "<C-j>";
-      action = ''
+      action.__raw = ''
         function() 
           require('trouble').next({ skip_groups = true, jump = true }) 
         end
       '';
-      lua = true;
     }
     {
       mode = "n";
       key = "<C-k>";
-      action = "function() require('trouble').previous({ skip_groups = true, jump = true }) end";
-      lua = true;
+      action.__raw = "function() require('trouble').previous({ skip_groups = true, jump = true }) end";
     }
     {
       mode = "n";
       key = "gR";
-      action = "function() require('trouble').toggle('lsp_references') end";
-      lua = true;
+      action.__raw = "function() require('trouble').toggle('lsp_references') end";
     }
   ];
 }

@@ -126,8 +126,7 @@
     {
       mode = "n";
       key = "<leader>e";
-      action = "vim.diagnostic.open_float";
-      lua = true;
+      action.__raw = "vim.diagnostic.open_float";
       options = {
         silent = true;
         desc = "Show diagnostics under cursor";
@@ -136,8 +135,7 @@
     {
       mode = "n";
       key = "<leader>n";
-      action = "vim.diagnostic.goto_next";
-      lua = true;
+      action.__raw = "vim.diagnostic.goto_next";
       options = {
         silent = true;
         desc = "Next diagnostic";
@@ -146,8 +144,7 @@
     {
       mode = "n";
       key = "<leader>N";
-      action = "vim.diagnostic.goto_prev";
-      lua = true;
+      action.__raw = "vim.diagnostic.goto_prev";
       options = {
         silent = true;
         desc = "Previous diagnostic";
@@ -183,11 +180,10 @@
     {
       mode = "n";
       key = "<leader>w";
-      action = ''function()
+      action.__raw = ''function()
           vim.lsp.buf.format()
           vim.cmd("write")
         end'';
-      lua = true;
       options = {
         silent = true;
         desc = "Format and save file";
@@ -204,8 +200,7 @@
     {
       mode = "n";
       key = "gd";
-      action = "function() vim.lsp.buf.definition() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.definition() end";
       options = {
         silent = true;
         desc = "Go to definition";
@@ -214,8 +209,7 @@
     {
       mode = "n";
       key = "K";
-      action = "function() vim.lsp.buf.hover() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.hover() end";
       options = {
         silent = true;
         desc = "Show information about symbol under cursor";
@@ -224,8 +218,7 @@
     {
       mode = "n";
       key = "<leader>vws";
-      action = "function() vim.lsp.buf.workspace_symbol() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.workspace_symbol() end";
       options = {
         silent = true;
         desc = "Search workspace for symbol";
@@ -234,8 +227,7 @@
     {
       mode = "n";
       key = "[d";
-      action = "function() vim.diagnostic.goto_next() end";
-      lua = true;
+      action.__raw = "function() vim.diagnostic.goto_next() end";
       options = {
         silent = true;
         desc = "Next diagnostic";
@@ -244,8 +236,7 @@
     {
       mode = "n";
       key = "]d";
-      action = "function() vim.diagnostic.goto_prev() end";
-      lua = true;
+      action.__raw = "function() vim.diagnostic.goto_prev() end";
       options = {
         silent = true;
         desc = "Previous diagnostic";
@@ -254,8 +245,7 @@
     {
       mode = "n";
       key = "<leader>vca";
-      action = "function() vim.lsp.buf.code_action() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.code_action() end";
       options = {
         silent = true;
         desc = "Show code actions available at cursor";
@@ -264,8 +254,7 @@
     {
       mode = "n";
       key = "<leader>vrr";
-      action = "function() vim.lsp.buf.references() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.references() end";
       options = {
         silent = true;
         desc = "Show all references to symbol under cursor";
@@ -274,8 +263,7 @@
     {
       mode = "n";
       key = "<leader>rn";
-      action = "function() vim.lsp.buf.rename() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.rename() end";
       options = {
         silent = true;
         desc = "Rename symbol under cursor";
@@ -284,8 +272,7 @@
     {
       mode = "n";
       key = "<C-h>";
-      action = "function() vim.lsp.buf.signature_help() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.signature_help() end";
       options = {
         silent = true;
         desc = "Show signature help";
@@ -294,8 +281,7 @@
     {
       mode = "n";
       key = "<leader>va";
-      action = "function() vim.lsp.buf.format() end";
-      lua = true;
+      action.__raw = "function() vim.lsp.buf.format() end";
       options = {
         silent = true;
         desc = "Format current file";

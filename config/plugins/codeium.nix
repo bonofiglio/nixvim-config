@@ -8,8 +8,7 @@
     {
       mode = "i";
       key = "<c-.>";
-      action = "function() return vim.fn['codeium#Accept']() end";
-      lua = true;
+      action.__raw = "function() return vim.fn['codeium#Accept']() end";
       options = {
         desc = "Accept codeium suggestion";
         expr = true;
@@ -19,8 +18,7 @@
     {
       mode = "i";
       key = "<c-,>";
-      action = "function() return vim.fn['codeium#CycleCompletions'](-1) end";
-      lua = true;
+      action.__raw = "function() return vim.fn['codeium#CycleCompletions'](-1) end";
       options = {
         desc = "Next codeium suggestion";
         expr = true;
@@ -30,8 +28,7 @@
     {
       mode = "i";
       key = "<c-m>";
-      action = "function () return vim.fn['codeium#CycleCompletions'](1) end";
-      lua = true;
+      action.__raw = "function () return vim.fn['codeium#CycleCompletions'](1) end";
       options = {
         desc = "Previous codeium suggestion";
         expr = true;
@@ -41,8 +38,7 @@
     {
       mode = "i";
       key = "<c-n>";
-      action = "function() return vim.fn['codeium#Clear']() end";
-      lua = true;
+      action.__raw = "function() return vim.fn['codeium#Clear']() end";
       options = {
         desc = "Clear codeium suggestion";
         expr = true;

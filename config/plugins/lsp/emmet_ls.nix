@@ -1,5 +1,5 @@
 {
-  plugins.lsp.servers.emmet_ls = {
+  plugins.lsp.servers.emmet-ls = {
     enable = true;
   };
 }

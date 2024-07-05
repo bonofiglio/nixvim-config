@@ -58,6 +58,6 @@
 
   # Extremely hacky way of getting the Trouble Telescope provider to work
   extraConfigLuaPost = if specialArgs.minimal then "" else ''
-    require('telescope.actions').open_with_trouble = require('trouble.providers.telescope').open_with_trouble
+    require('telescope.actions').open_with_trouble = require('trouble.sources.telescope').open
   '';
 }
