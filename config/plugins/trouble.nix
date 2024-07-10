@@ -7,47 +7,56 @@
     {
       mode = "n";
       key = "<leader>to";
-      action = "Trouble toggle";
+      action = "<cmd>Trouble toggle<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<leader>tt";
-      action = "Trouble close";
+      action = "<cmd>Trouble close<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<leader>tw";
-      action = "Trouble toggle diagnostics";
+      action = "<cmd>Trouble toggle diagnostics<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<leader>td";
-      action = "Trouble toggle diagnostics filter.buf=0";
+      action = "<cmd>Trouble toggle diagnostics filter.buf=0<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<leader>tq";
-      action = "Trouble toggle quickfix";
+      action = "<cmd>Trouble toggle quickfix<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<leader>tl";
-      action = "Trouble toggle loclist";
+      action = "<cmd>Trouble toggle loclist<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<C-j>";
-      action = "Trouble next";
+      action = "<cmd>Trouble next<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "<C-k>";
-      action = "Trouble prev";
+      action = "<cmd>Trouble prev<CR>";
+      options.silent = true;
     }
     {
       mode = "n";
       key = "gR";
-      action = "Trouble toggle lsp_references win.position=right";
+      action = "<cmd>Trouble toggle lsp_references win.position=right<CR>";
+      options.silent = true;
     }
   ];
 }
