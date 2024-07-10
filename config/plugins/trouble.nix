@@ -7,51 +7,47 @@
     {
       mode = "n";
       key = "<leader>to";
-      action.__raw = "function() require('trouble').toggle() end";
+      action = "Trouble toggle";
     }
     {
       mode = "n";
       key = "<leader>tt";
-      action.__raw = "function() require('trouble').close() end";
+      action = "Trouble close";
     }
     {
       mode = "n";
       key = "<leader>tw";
-      action.__raw = "function() require('trouble').toggle('workspace_diagnostics') end";
+      action = "Trouble toggle diagnostics";
     }
     {
       mode = "n";
       key = "<leader>td";
-      action.__raw = "function() require('trouble').toggle('document_diagnostics') end";
+      action = "Trouble toggle diagnostics filter.buf=0";
     }
     {
       mode = "n";
       key = "<leader>tq";
-      action.__raw = "function() require('trouble').toggle('quickfix') end";
+      action = "Trouble toggle quickfix";
     }
     {
       mode = "n";
       key = "<leader>tl";
-      action.__raw = "function() require('trouble').toggle('loclist') end";
+      action = "Trouble toggle loclist";
     }
     {
       mode = "n";
       key = "<C-j>";
-      action.__raw = ''
-        function() 
-          require('trouble').next({ skip_groups = true, jump = true }) 
-        end
-      '';
+      action = "Trouble next";
     }
     {
       mode = "n";
       key = "<C-k>";
-      action.__raw = "function() require('trouble').previous({ skip_groups = true, jump = true }) end";
+      action = "Trouble prev";
     }
     {
       mode = "n";
       key = "gR";
-      action.__raw = "function() require('trouble').toggle('lsp_references') end";
+      action = "Trouble toggle lsp_references win.position=right";
     }
   ];
 }

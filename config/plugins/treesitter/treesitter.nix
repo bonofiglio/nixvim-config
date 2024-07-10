@@ -3,8 +3,7 @@
     enable = true;
     nixGrammars = true;
     nixvimInjections = true;
-    ensureInstalled = "all";
-    moduleConfig = {
+    settings = {
       parser_install_dir = "~/.cache/nvim/treesitters";
     };
   };
