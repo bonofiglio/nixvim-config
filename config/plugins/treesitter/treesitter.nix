@@ -4,6 +4,7 @@
     nixGrammars = true;
     nixvimInjections = true;
     settings = {
+      auto_intsall = true;
       parser_install_dir = "~/.cache/nvim/treesitters";
     };
   };
