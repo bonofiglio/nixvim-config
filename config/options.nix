@@ -26,6 +26,7 @@
       # Misc
       updatetime = 50; # Faster updates, happier me
       colorcolumn = "80"; # Gotta keep that punched card compatibility. You never know
+      foldlevel = 99; # Don't fold by default
     };
 
     extraConfigLua = ''
