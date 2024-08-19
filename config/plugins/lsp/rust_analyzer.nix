@@ -7,6 +7,7 @@
       procMacro.enable = true;
       diagnostics.enable = true;
       interpret.tests = true;
+      check.command = "clippy";
     };
   };
 }
