@@ -16,6 +16,7 @@
     # ./ocamllsp.nix
     ./pylsp.nix
     ./rust_analyzer.nix
+    ./sqls.nix
     ./svelte.nix
     ./tailwindcss.nix
     ./taplo.nix
