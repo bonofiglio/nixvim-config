@@ -39,6 +39,8 @@
 
       -- Directory to store undo history
       vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" 
+
+      vim.g.omni_sql_no_default_maps = 1
     '';
   };
 }
