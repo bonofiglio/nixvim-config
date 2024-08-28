@@ -1,5 +1,5 @@
 {
-  plugins.sqls = {
+  plugins.lsp.servers.sqls = {
     enable = true;
   };
 }
