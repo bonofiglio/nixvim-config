@@ -21,8 +21,9 @@
     ./tailwindcss.nix
     ./taplo.nix
     ./terraformls.nix
-    ./tsserver.nix
+    ./ts-ls.nix
     ./volar.nix
+    ./web-devicons.nix
     ./yamlls.nix
     ./zls.nix
   ];
