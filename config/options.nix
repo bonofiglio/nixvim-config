@@ -30,13 +30,6 @@
     };
 
     extraConfigLua = ''
-      -- Enable signcolumn only when the KITTY_SCROLLBACK environment variable is not set
-      if os.getenv("KITTY_SCROLLBACK") == "1" then
-          vim.opt.signcolumn = "no"
-      else
-          vim.opt.signcolumn = "yes"
-      end
-
       -- Directory to store undo history
       vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" 
 

@@ -9,7 +9,6 @@
     ./crates.nix
     ./fugitive.nix
     ./harpoon.nix
-    ./kitty-scrollback.nix
     ./leap.nix
     ./lualine.nix
     ./luasnip.nix
